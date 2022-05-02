@@ -1,10 +1,15 @@
 
 
-String  字符串
-List    列表
-Hash
-Set     集合
-ZSet    有序集合
+> String  字符串     - 源碼中用SDS(simple dynamic string) 封裝 char[]，這是是 Redis 存儲的最小單元，一個 SDS 最大可以存儲 512M 信息。
+> 
+> List    列表    
+> 
+> Hash              - K 絕對是字符串對象，而 V 可以是 String、List、Hash、Set、ZSet 任意一種。 (hash 的底層主要是採用字典 dict 的結構)
+> 
+> Set     集合      - 可以認爲是沒有 Value 的 Dict
+> 
+> ZSet    有序集合  -  Zset 用的就是可以跟二叉樹媲美的跳躍表來實現有序
+> 
 [圖解-Redis：從應用到底層，一文幫你搞定](https://www.readfog.com/a/1635022294551203840)
 
 ---
@@ -12,8 +17,7 @@ ZSet    有序集合
 [Redis教學](https://www.1ju.org/redis/redis-quick-guide)
 
 ---
-應用:
-短網址系統ㄝ, 網站點擊統計系統, 高即時性排名系統
+#### 應用:短網址系統ㄝ, 網站點擊統計系統, 高即時性排名系統
 [技術共筆-資料庫的好夥伴：Redis](https://blog.techbridge.cc/2016/06/18/redis-introduction/)
 
 ---
