@@ -1,5 +1,5 @@
 
-
+[圖解-Redis：從應用到底層，一文幫你搞定](https://www.readfog.com/a/1635022294551203840)
 > String  字符串     - 源碼中用SDS(simple dynamic string) 封裝 char[]，這是是 Redis 存儲的最小單元，一個 SDS 最大可以存儲 512M 信息。
 > 
 > List    列表    
@@ -10,7 +10,11 @@
 > 
 > ZSet    有序集合  -  Zset 用的就是可以跟二叉樹媲美的跳躍表來實現有序
 > 
-[圖解-Redis：從應用到底層，一文幫你搞定](https://www.readfog.com/a/1635022294551203840)
+> [Redis Geo 核心原理解析](https://mp.weixin.qq.com/s?__biz=MzI4NjI1OTI4Nw==&mid=2247485957&idx=2&sn=a5a75f2f9053cfd40df2d0d7a16389ef&scene=21#wechat_redirect)
+> 
+> bitmap  
+>>          用戶簽到 -        key = 年份：用戶 id  offset = （今天是一年中的第幾天） % （今年的天數）
+>>          統計活躍用戶  -   使用日期作爲 key，然後用戶 id 爲 offset 設置不同 offset 爲 0 1 即可。
 
 ---
 #### Redis 是一個開源、BSD 許可的高級鍵值存儲。它通常被稱為數據結構服務器，因為鍵可以包含字符串、散列、列表、集合和排序集合。Redis 是用 C 語言編寫的。本教程提供了對 Redis 概念的良好理解，這是創建和部署高度可擴展且以性能為導向的系統所必需的
